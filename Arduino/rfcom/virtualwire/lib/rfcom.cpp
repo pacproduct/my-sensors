@@ -46,9 +46,9 @@ String rfcom::get_message(unsigned long milliseconds) {
     byte message_buf[VW_MAX_MESSAGE_LEN+1];
     uint8_t taille_message = VW_MAX_MESSAGE_LEN;
     if (vw_get_message(message_buf, &taille_message)) {
-      message_buf[taille_message] = '\0';
-     //Serial.println("vw_get_message"); 
       // On copie le message, qu'il soit corrompu ou non
+      message_buf[taille_message] = '\0';
+	  //Serial.println("vw_get_message"); 
       message = String((char*) message_buf); // Affiche le message
     }
   }
