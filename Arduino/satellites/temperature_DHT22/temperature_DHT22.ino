@@ -5,7 +5,7 @@
 #include <VirtualWire.h>
 #include <VirtualWire_Config.h>
 
-#define DHTPIN 2
+#define DHTPIN 8
 #define DHTTYPE DHT22
 DHT dht(DHTPIN, DHTTYPE);
 
@@ -21,6 +21,7 @@ void setup() {
   rfcom_obj.init();
   dht.begin();
   //Serial.println("started");
+  delay(500);
 }
 
 void loop() {
