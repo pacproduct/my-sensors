@@ -133,7 +133,7 @@ SerialCom.prototype.openConnection = function(callback) {
 };
 
 /**
- * Internal function run when the autoReconnect option is enable.
+ * Internal function run when the autoReconnect option is enabled.
  * Tries continuously to reconnect until the connection is up again.
  * Stops trying when:
  * - Connection is up again.
@@ -193,10 +193,10 @@ SerialCom.prototype.closeConnection = function(callback) {
  *
  * @param string message
  *   Message to send to the tiers component.
- *   Must be <= than options.protocolMsgMaxLength, otherwise it will be
+ *   Must be <= options.protocolMsgMaxLength, otherwise it will be
  *   truncated without notice.
  *   When this happens, if input message contained characters encoded on more
- *   than 8 bits (e.g. UTF8), you migth end up with invalid characters!
+ *   than 8 bits (e.g. UTF8), you might end up with invalid characters!
  * @param function sendStartedCallback
  *   Function called when the send operation started. Signature:
  *   function(err) {}

@@ -4,8 +4,7 @@ var comArduino = new SerialCom();
 
 // When data received, display it.
 comArduino.on('data', function(data) {
-  console.log('Received:');
-  console.log(data);
+  console.log('Received: [' + data + ']');
 });
 
 // Error
